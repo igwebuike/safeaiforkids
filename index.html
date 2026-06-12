@@ -4,173 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SafeAIForKids | NovaVerse Adventures</title>
-  <meta name="description" content="SafeAIForKids presents NovaVerse Adventures: a global children's entertainment brand combining education, fun, AI literacy, digital safety, STEM, kindness, and adventure." />
+  <meta name="description" content="SafeAIForKids is building the world's trusted AI education and entertainment brand for kids through NovaVerse Adventures, safe AI literacy, STEM stories, and parent resources." />
+  <meta property="og:title" content="SafeAIForKids | NovaVerse Adventures" />
+  <meta property="og:description" content="Where kids learn, explore, invent, and play safely in an AI-powered world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/novaverse-logo-1.png" />
+  <link rel="preload" href="assets/novaverse-logo-1.png" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="starfield" aria-hidden="true"></div>
   <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="#home">
-        <span class="brand-mark">✦</span>
-        <span>SafeAIForKids</span>
-      </a>
-      <div class="nav-links">
-        <a href="#novaverse">NovaVerse</a>
-        <a href="#characters">Characters</a>
-        <a href="#parents">Parents</a>
-        <a href="#episodes">Episodes</a>
-        <a href="#join" class="nav-cta">Join Waitlist</a>
-      </div>
+    <a href="#home" class="brand" aria-label="SafeAIForKids home"><span class="brand-mark">✦</span><span>SafeAIForKids</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#novaverse">NovaVerse</a>
+      <a href="#characters">Characters</a>
+      <a href="#parents">Parents</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#schools">Schools</a>
+      <a class="nav-cta" href="#waitlist">Join Waitlist</a>
     </nav>
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="hero-bg-orb orb-one"></div>
-      <div class="hero-bg-orb orb-two"></div>
-      <div class="hero-copy">
+    <section class="hero section-pad">
+      <div class="hero-copy reveal">
         <p class="eyebrow">SafeAIForKids presents</p>
         <h1>NovaVerse Adventures</h1>
-        <p class="tagline">Where kids learn, explore, invent, and play.</p>
-        <p class="hero-text">
-          A global children’s brand combining education, fun, entertainment, adventure,
-          STEM, AI literacy, digital safety, kindness, and imagination.
-        </p>
+        <p class="hero-tagline">Where kids learn, explore, invent, and play safely in an AI-powered world.</p>
+        <p class="hero-text">A global children's brand combining story-driven entertainment, AI literacy, STEM, digital safety, friendship, and imagination.</p>
         <div class="hero-actions">
-          <a href="#join" class="btn primary">Join the Launch List</a>
-          <a href="#theme" class="btn secondary">Play Theme Song</a>
+          <a class="button primary" href="#waitlist">Join the Launch List</a>
+          <a class="button secondary" href="#trailer">Watch Trailer</a>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="assets/novaverse-logo-1.png" alt="NovaVerse Adventures SafeAIForKids logo" />
+      <div class="hero-visual reveal delay-1">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="logo-card tilt-card">
+          <img src="assets/novaverse-logo-1.png" alt="NovaVerse Adventures SafeAIForKids logo" />
+        </div>
+        <div class="floating-badge badge-one">AI Safety</div>
+        <div class="floating-badge badge-two">STEM</div>
       </div>
     </section>
 
-    <section class="mission">
-      <div>
-        <p class="section-kicker">Parent Brand</p>
-        <h2>SafeAIForKids builds trust.</h2>
-        <p>
-          SafeAIForKids helps children safely understand the future of technology through stories
-          parents can trust and kids actually want to watch.
-        </p>
-      </div>
-      <div>
-        <p class="section-kicker">Story Universe</p>
-        <h2>NovaVerse makes it fun.</h2>
-        <p>
-          NovaVerse Adventures turns AI, digital safety, STEM, friendship, and problem-solving into
-          character-led adventures full of humor, mystery, and discovery.
-        </p>
+    <section class="trust-grid section-pad compact">
+      <article class="glass-card reveal"><p class="eyebrow">Parent Brand</p><h2>SafeAIForKids builds trust.</h2><p>Guides, resources, and stories that help families understand AI, digital safety, and future skills.</p></article>
+      <article class="glass-card reveal delay-1"><p class="eyebrow">Story Universe</p><h2>NovaVerse makes it fun.</h2><p>Adventure-first episodes featuring Nova, Luna, Pixel, and Byte solving challenges through teamwork.</p></article>
+      <article class="glass-card reveal delay-2"><p class="eyebrow">Global Mission</p><h2>Learning without fear.</h2><p>Entertainment first. Education always. A positive bridge between children, parents, schools, and technology.</p></article>
+    </section>
+
+    <section id="trailer" class="trailer section-pad">
+      <div class="section-title reveal"><p class="eyebrow">Featured Clip</p><h2>The Secret AI Treasure</h2><p>A polished NovaVerse preview built for YouTube, Shorts, parent trust, and launch momentum.</p></div>
+      <div class="video-shell reveal delay-1">
+        <video controls poster="assets/novaverse-logo-1.png" preload="metadata">
+          <source src="assets/secret-ai-treasure.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
 
-    <section id="novaverse" class="world">
-      <div class="section-heading">
-        <p class="section-kicker">The World</p>
-        <h2>Welcome to the NovaVerse</h2>
-        <p>
-          A colorful near-future world where imagination, technology, curiosity, and adventure turn
-          everyday problems into extraordinary missions.
-        </p>
-      </div>
-      <div class="world-grid">
-        <article><span>🏡</span><h3>Treehouse Tech Lab</h3><p>Nova’s creative headquarters for inventions, experiments, and surprise discoveries.</p></article>
-        <article><span>🌳</span><h3>Discovery Forest</h3><p>A playful outdoor world filled with clues, strange signals, and hidden mysteries.</p></article>
-        <article><span>🚀</span><h3>Space Missions</h3><p>Luna leads the team into space adventures that teach curiosity, courage, and science.</p></article>
-        <article><span>🤖</span><h3>Robot City</h3><p>A funny, futuristic place where smart machines learn teamwork and responsibility.</p></article>
+    <section id="novaverse" class="world section-pad">
+      <div class="section-title reveal"><p class="eyebrow">The World</p><h2>Welcome to the NovaVerse</h2><p>A colorful near-future world where imagination, curiosity, and technology turn everyday problems into extraordinary missions.</p></div>
+      <div class="feature-grid four">
+        <article class="mini-card reveal"><span>🏡</span><h3>Treehouse Tech Lab</h3><p>Nova's creative HQ for inventions, experiments, and surprising discoveries.</p></article>
+        <article class="mini-card reveal delay-1"><span>🌳</span><h3>Discovery Forest</h3><p>A playful outdoor world filled with clues, signals, puzzles, and hidden mysteries.</p></article>
+        <article class="mini-card reveal delay-2"><span>🚀</span><h3>Space Missions</h3><p>Luna leads the team into adventures that teach curiosity, courage, and science.</p></article>
+        <article class="mini-card reveal delay-3"><span>🤖</span><h3>Robot City</h3><p>A futuristic place where smart machines learn teamwork and responsibility.</p></article>
       </div>
     </section>
 
-    <section id="characters" class="characters">
-      <div class="section-heading">
-        <p class="section-kicker">Meet the Team</p>
-        <h2>Four heroes. One big adventure.</h2>
-      </div>
-      <div class="character-grid">
-        <article class="character nova">
-          <div class="avatar">💡</div>
-          <h3>Nova</h3>
-          <p class="role">Young AI Inventor</p>
-          <p>The heart of the team and the main problem solver.</p>
-          <strong>“Let’s figure it out!”</strong>
-        </article>
-        <article class="character luna">
-          <div class="avatar">🚀</div>
-          <h3>Luna</h3>
-          <p class="role">Space Explorer</p>
-          <p>Brave, curious, high-energy, and always ready for the next mission.</p>
-          <strong>“Adventure awaits!”</strong>
-        </article>
-        <article class="character pixel">
-          <div class="avatar">🤖</div>
-          <h3>Pixel</h3>
-          <p class="role">Funny Robot Companion</p>
-          <p>Loyal, hilarious, and accidentally chaotic in the best possible way.</p>
-          <strong>“Oops... not in my programming!”</strong>
-        </article>
-        <article class="character byte">
-          <div class="avatar">🐾</div>
-          <h3>Byte</h3>
-          <p class="role">AI-Powered Pet</p>
-          <p>Cute, mischievous, and great at finding clues everyone else misses.</p>
-          <strong>“Byte found it!”</strong>
-        </article>
+    <section id="characters" class="characters section-pad">
+      <div class="section-title reveal"><p class="eyebrow">Meet the Team</p><h2>Four heroes. One big adventure.</h2></div>
+      <div class="feature-grid four">
+        <article class="character-card reveal"><span class="avatar">💡</span><h3>Nova</h3><b>Young AI Inventor</b><p>The heart of the team and the main problem solver.</p><em>“Let's figure it out!”</em></article>
+        <article class="character-card reveal delay-1"><span class="avatar">🚀</span><h3>Luna</h3><b>Space Explorer</b><p>Brave, curious, high-energy, and always ready for the next mission.</p><em>“Adventure awaits!”</em></article>
+        <article class="character-card reveal delay-2"><span class="avatar">🤖</span><h3>Pixel</h3><b>Funny Robot Companion</b><p>Loyal, hilarious, and accidentally chaotic in the best possible way.</p><em>“Oops... not in my programming!”</em></article>
+        <article class="character-card reveal delay-3"><span class="avatar">🐾</span><h3>Byte</h3><b>AI-Powered Pet</b><p>Cute, mischievous, and great at finding clues everyone else misses.</p><em>“Byte found it!”</em></article>
       </div>
     </section>
 
-    <section id="theme" class="theme">
-      <div>
-        <p class="section-kicker">Brand Sound</p>
-        <h2>Nova! Luna! Pixel! Byte!</h2>
-        <p>A catchy theme built for YouTube Kids intros, Shorts, classroom moments, and sing-along brand recall.</p>
-      </div>
-      <audio controls src='assets/novaverse-theme.mp3'></audio>
+    <section class="sound-card reveal">
+      <div><p class="eyebrow">Brand Sound</p><h2>Nova! Luna! Pixel! Byte!</h2><p>A catchy theme built for YouTube Kids intros, Shorts, classroom moments, and sing-along brand recall.</p></div>
+      <audio controls src="assets/novaverse-theme.mp3">Your browser does not support audio.</audio>
     </section>
 
-    <section id="parents" class="parents">
-      <div class="section-heading">
-        <p class="section-kicker">Why Parents Trust It</p>
-        <h2>Entertainment first. Learning always.</h2>
-      </div>
-      <div class="pillars">
-        <span>AI Literacy</span>
-        <span>Digital Safety</span>
-        <span>STEM</span>
-        <span>Kindness</span>
-        <span>Creativity</span>
-        <span>Problem-Solving</span>
-        <span>Teamwork</span>
-        <span>Future Skills</span>
+    <section id="parents" class="parents section-pad">
+      <div class="section-title reveal"><p class="eyebrow">Why Parents Trust It</p><h2>Entertainment first. Learning always.</h2><p>SafeAIForKids helps families prepare children for an AI-powered future through stories, printables, and simple parent guidance.</p></div>
+      <div class="pill-row reveal delay-1"><span>AI Literacy</span><span>Digital Safety</span><span>STEM</span><span>Kindness</span><span>Creativity</span><span>Problem-Solving</span><span>Teamwork</span><span>Future Skills</span></div>
+      <div class="resource-grid">
+        <article class="resource-card reveal"><h3>AI Safety Guide</h3><p>A parent-friendly guide to explain AI, safe usage, and smart boundaries.</p></article>
+        <article class="resource-card reveal delay-1"><h3>Family Cyber Safety Checklist</h3><p>Simple household rules for devices, privacy, passwords, and online behavior.</p></article>
+        <article class="resource-card reveal delay-2"><h3>Printable STEM Activities</h3><p>Fun worksheets and missions connected to each NovaVerse episode.</p></article>
       </div>
     </section>
 
-    <section id="episodes" class="episodes">
-      <div class="section-heading">
-        <p class="section-kicker">Coming Soon</p>
-        <h2>Season 1 starts here.</h2>
-      </div>
-      <div class="episode-list">
-        <article><h3>Episode 1: The Robot Revolt</h3><p>Nova and the team learn about connected devices when a robot vacuum starts a household uprising.</p></article>
-        <article><h3>Episode 2: The Glowing Hole</h3><p>A strange green portal appears, pulling the team toward a hidden NovaVerse mystery.</p></article>
-        <article><h3>Episode 3: The Island of Secrets</h3><p>The adventure expands into a digital island filled with clues, crystals, and a mysterious AI presence.</p></article>
+    <section id="episodes" class="episodes section-pad">
+      <div class="section-title reveal"><p class="eyebrow">Coming Soon</p><h2>Season 1 starts here.</h2></div>
+      <div class="feature-grid three">
+        <article class="episode-card reveal"><small>Episode 1</small><h3>The Secret AI Treasure</h3><p>Nova and the team discover a glowing map and learn that every smart quest starts with clear steps.</p></article>
+        <article class="episode-card reveal delay-1"><small>Episode 2</small><h3>The Glowing Hole</h3><p>A strange portal pulls the team toward a hidden NovaVerse mystery.</p></article>
+        <article class="episode-card reveal delay-2"><small>Episode 3</small><h3>The Island of Secrets</h3><p>The adventure expands into a digital island filled with clues, crystals, and an AI presence.</p></article>
       </div>
     </section>
 
-    <section id="join" class="join">
-      <p class="section-kicker">Join the Mission</p>
+    <section id="schools" class="schools section-pad compact">
+      <div class="glass-card wide reveal"><p class="eyebrow">Schools & Homeschools</p><h2>Bring AI literacy into the classroom.</h2><p>Free digital safety lessons, STEM worksheets, teacher packs, homeschool activities, and classroom-friendly NovaVerse missions are coming soon.</p><a class="button secondary" href="#waitlist">Request Educator Updates</a></div>
+    </section>
+
+    <section id="waitlist" class="waitlist reveal">
+      <p class="eyebrow">Join the Mission</p>
       <h2>Be first to enter the NovaVerse.</h2>
       <p>Get updates on episodes, songs, books, printables, and SafeAIForKids launch news.</p>
-      <form onsubmit="return handleSignup(event)">
-        <input type="email" placeholder="Parent email address" required />
+      <form id="waitlistForm" class="waitlist-form">
+        <input type="email" id="email" placeholder="Parent email address" required />
+        <select id="audience" aria-label="Audience type">
+          <option>Parent</option><option>Teacher</option><option>Homeschool Family</option><option>Partner / Investor</option>
+        </select>
         <button type="submit">Join Waitlist</button>
       </form>
-      <p id="formMessage" class="form-message"></p>
+      <p id="formMessage" class="form-message" role="status"></p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 SafeAIForKids. NovaVerse Adventures by NovaVerse Studios.</p>
+  <footer class="site-footer">
+    <div>© 2026 SafeAIForKids. NovaVerse Adventures by NovaVerse Studios.</div>
+    <div class="footer-links"><a href="#parents">Parents</a><a href="#schools">Schools</a><a href="#waitlist">Contact</a></div>
   </footer>
 
   <script src="script.js"></script>

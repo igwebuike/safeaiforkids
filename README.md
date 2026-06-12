@@ -1,18 +1,28 @@
 # SafeAIForKids / NovaVerse Adventures Website
 
-Static website starter for the SafeAIForKids parent brand and NovaVerse Adventures content universe.
+Static deployment-ready website for SafeAIForKids and NovaVerse Adventures.
 
 ## Files
-- index.html
-- styles.css
-- script.js
-- assets/novaverse-logo-1.png
-- assets/novaverse-theme.mp3, if audio was uploaded
+- `index.html`
+- `styles.css`
+- `script.js`
+- `assets/novaverse-logo-1.png`
+- `assets/novaverse-logo-2.png`
+- `assets/novaverse-theme.mp3`
+- `assets/secret-ai-treasure.mp4`
 
-## How to use
-Open index.html in a browser, or deploy the folder to Netlify, Vercel, GitHub Pages, or any static host.
+## Render Static Site Settings
 
-## Brand Structure
-SafeAIForKids = parent brand and mission.
-NovaVerse Studios = creative studio.
-NovaVerse Adventures = kids-facing entertainment universe.
+Build Command: leave blank
+
+Publish Directory: `.`
+
+Root Directory: leave blank
+
+## Update GitHub
+
+```bash
+git add .
+git commit -m "Upgrade SafeAIForKids global brand website"
+git push origin main
+```
