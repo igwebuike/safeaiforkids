@@ -1,77 +1,58 @@
 # SafeAIForKids Fullstack Deployment
 
-This update turns the waitlist from browser-only storage into a real database-backed signup flow.
+## Services
 
-## What changed
+1. Static Site
+   - Root Directory: blank
+   - Build Command: blank
+   - Publish Directory: .
 
-- Frontend `script.js` now sends waitlist signups to a backend API.
-- New `/backend` folder contains an Express API.
-- Backend stores emails in PostgreSQL.
-- Admin endpoint lets you view signups.
+2. PostgreSQL
+   - Name: safeaiforkids-db
+   - Database: safeaiforkids
+   - User: safeaiforkids_user
 
-## Render setup
+3. Web Service API
+   - Name: safeaiforkids-api
+   - Root Directory: backend
+   - Build Command: npm install
+   - Start Command: npm start
 
-### 1. Push this repo to GitHub
+## Required API environment variables
 
-```bash
-git add .
-git commit -m "Add database-backed waitlist API"
-git push origin main
+```env
+NODE_ENV=production
+DATABASE_URL=<Render Internal Database URL>
+ADMIN_TOKEN=<your-secret-admin-token>
+ALLOWED_ORIGINS=https://safeaiforkids.com,https://www.safeaiforkids.com,https://safeaiforkids.onrender.com
 ```
 
-Your existing static site will auto-deploy.
+## Optional welcome email variables
 
-### 2. Create Render PostgreSQL
+To send welcome emails, create a Resend account, verify your sending domain, then add:
 
-Render Dashboard → New → PostgreSQL
+```env
+RESEND_API_KEY=<your-resend-api-key>
+FROM_EMAIL=SafeAIForKids <hello@safeaiforkids.com>
+```
 
-Name:
-`safeaiforkids-db`
+Without `RESEND_API_KEY`, signups still save to the database, but welcome emails are skipped.
 
-Copy the Internal Database URL.
-
-### 3. Create Render Web Service for backend
-
-Render Dashboard → New → Web Service → select the same GitHub repo.
-
-Settings:
-
-- Name: `safeaiforkids-api`
-- Root Directory: `backend`
-- Runtime: `Node`
-- Build Command: `npm install`
-- Start Command: `npm start`
-
-Environment variables:
-
-- `DATABASE_URL` = your Render PostgreSQL Internal Database URL
-- `NODE_ENV` = `production`
-- `ADMIN_TOKEN` = create a long private password/token
-- `ALLOWED_ORIGINS` = `https://safeaiforkids.com,https://www.safeaiforkids.com,https://safeaiforkids.onrender.com`
-
-### 4. Confirm backend works
+## Admin dashboard
 
 Open:
 
-`https://safeaiforkids-api.onrender.com/health`
-
-You should see:
-
-```json
-{"ok":true}
+```text
+https://safeaiforkids.com/admin
 ```
 
-### 5. Test waitlist
+Use your `ADMIN_TOKEN` to log in.
 
-Go to:
+## Useful SQL
 
-`https://safeaiforkids.com`
-
-Submit an email.
-
-### 6. View signups
-
-Open:
-
-`https://safeaiforkids-api.onrender.com/api/admin/waitlist?token=YOUR_ADMIN_TOKEN`
-
+```sql
+SELECT first_name, last_name, email, audience, country, source, welcome_email_sent, created_at
+FROM waitlist_signups
+ORDER BY created_at DESC
+LIMIT 50;
+```

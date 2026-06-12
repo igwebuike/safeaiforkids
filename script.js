@@ -40,7 +40,10 @@ if (waitlistForm) {
     event.preventDefault();
     const submitButton = waitlistForm.querySelector('button[type="submit"]');
     const email = document.getElementById('email').value.trim();
-    const audience = document.getElementById('audience').value;
+    const firstName = document.getElementById('firstName')?.value.trim() || '';
+    const lastName = document.getElementById('lastName')?.value.trim() || '';
+    const audience = document.getElementById('audience')?.value || 'Parent';
+    const country = document.getElementById('country')?.value.trim() || '';
 
     if (!email) {
       setFormMessage('Please enter a valid email address.', true);
@@ -57,7 +60,10 @@ if (waitlistForm) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
+          firstName,
+          lastName,
           audience,
+          country,
           source: window.location.hostname || 'safeaiforkids.com'
         })
       });

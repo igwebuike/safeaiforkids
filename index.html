@@ -118,11 +118,14 @@
       <p class="eyebrow">Join the Mission</p>
       <h2>Be first to enter the NovaVerse.</h2>
       <p>Get updates on episodes, songs, books, printables, and SafeAIForKids launch news.</p>
-      <form id="waitlistForm" class="waitlist-form">
-        <input type="email" id="email" placeholder="Parent email address" required />
+      <form id="waitlistForm" class="waitlist-form waitlist-form-expanded">
+        <input type="text" id="firstName" placeholder="First name" autocomplete="given-name" />
+        <input type="text" id="lastName" placeholder="Last name" autocomplete="family-name" />
+        <input type="email" id="email" placeholder="Email address" autocomplete="email" required />
         <select id="audience" aria-label="Audience type">
-          <option>Parent</option><option>Teacher</option><option>Homeschool Family</option><option>Partner / Investor</option>
+          <option>Parent</option><option>Teacher</option><option>School</option><option>Homeschool Family</option><option>Partner / Investor</option>
         </select>
+        <input type="text" id="country" placeholder="Country" autocomplete="country-name" />
         <button type="submit">Join Waitlist</button>
       </form>
       <p id="formMessage" class="form-message" role="status"></p>
